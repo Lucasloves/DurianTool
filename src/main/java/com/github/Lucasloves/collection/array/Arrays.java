@@ -1,8 +1,12 @@
 package com.github.Lucasloves.collection.array;
 
 import com.github.Lucasloves.exception.EmptyException;
+import com.github.Lucasloves.exception.SerializeException;
 import com.github.Lucasloves.serialize.SerializeObject;
 import com.sun.istack.internal.NotNull;
+
+import java.io.Serializable;
+import java.util.Collections;
 
 /**
  * @author: Cynaith
@@ -40,5 +44,18 @@ public class Arrays implements ArrayCommand{
         return SerializeObject.ByteToObject(bytes);
     }
 
-
+    /**
+     * Object转换byte[]
+     * @param object 序列化的对象
+     * @return
+     */
+    @Override
+    public byte[] ObjectToByte(Object object) {
+        if (object instanceof Serializable){
+            return SerializeObject.ObjectToByte(object);
+        }
+        else {
+            throw new SerializeException("object should implement Serializable");
+        }
+    }
 }

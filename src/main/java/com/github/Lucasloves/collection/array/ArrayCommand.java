@@ -18,4 +18,13 @@ public interface ArrayCommand {
      * @return Object
      */
     Object ByteToObject(byte[] bytes);
+
+    /**
+     * Object转换byte[]
+     * @param object 序列化的对象
+     * @return
+     */
+    byte[] ObjectToByte(Object object);
+
+
 }
