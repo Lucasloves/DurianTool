@@ -4,6 +4,7 @@ import com.github.Lucasloves.collection.array.Arrays;
 import com.github.Lucasloves.collection.list.Lists;
 import com.github.Lucasloves.collection.map.Maps;
 import com.github.Lucasloves.collection.set.Sets;
+import com.github.Lucasloves.time.Times;
 
 /**
  * @author: Cynaith
@@ -44,5 +45,13 @@ public class DurianTool {
      */
     public static Arrays Arrays(){
         return new Arrays();
+    }
+
+    /**
+     *
+     * @return 返回Time工具类实例
+     */
+    public static Times Times(){
+        return new Times();
     }
 }
