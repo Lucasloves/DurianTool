@@ -5,7 +5,7 @@ import com.github.Lucasloves.exception.SerializeException;
 import java.io.*;
 
 /**
- * @autohr: Cynaith
+ * @author: Cynaith
  **/
 public class SerializeObject {
     //序列化

@@ -1,7 +1,7 @@
 package com.github.Lucasloves.collection.array;
 
 /**
- * @autohr: Cynaith
+ * @author: Cynaith
  **/
 public interface ArrayCommand {
 

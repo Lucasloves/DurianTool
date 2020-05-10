@@ -1,7 +1,7 @@
 package com.github.Lucasloves.collection;
 
 /**
- * @autohr: Cynaith
+ * @author: Cynaith
  **/
 public interface Collections {
 

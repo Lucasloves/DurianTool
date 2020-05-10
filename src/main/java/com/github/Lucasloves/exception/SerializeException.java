@@ -1,7 +1,7 @@
 package com.github.Lucasloves.exception;
 
 /**
- * @autohr: Cynaith
+ * @author: Cynaith
  **/
 public class SerializeException extends RuntimeException{
     public SerializeException() {

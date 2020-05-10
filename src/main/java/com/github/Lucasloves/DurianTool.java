@@ -6,7 +6,7 @@ import com.github.Lucasloves.collection.map.Maps;
 import com.github.Lucasloves.collection.set.Sets;
 
 /**
- * @autohr: Cynaith
+ * @author: Cynaith
  **/
 public class DurianTool {
 

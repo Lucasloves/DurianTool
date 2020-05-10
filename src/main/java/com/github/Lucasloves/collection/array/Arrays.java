@@ -5,7 +5,7 @@ import com.github.Lucasloves.serialize.SerializeObject;
 import com.sun.istack.internal.NotNull;
 
 /**
- * @autohr: Cynaith
+ * @author: Cynaith
  **/
 public class Arrays implements ArrayCommand{
 

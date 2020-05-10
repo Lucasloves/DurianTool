@@ -1,7 +1,7 @@
 package com.github.Lucasloves.collection.list;
 
 /**
- * @autohr: Cynaith
+ * @author: Cynaith
  **/
 public interface ListCommand {
 }

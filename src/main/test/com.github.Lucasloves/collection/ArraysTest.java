@@ -3,7 +3,7 @@ package com.github.Lucasloves.collection;
 import com.github.Lucasloves.DurianTool;
 
 /**
- * @autohr: Cynaith
+ * @author: Cynaith
  **/
 public class ArraysTest {
     public static void main(String[] args) {

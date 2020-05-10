@@ -1,7 +1,7 @@
 package com.github.Lucasloves.collection.map;
 
 /**
- * @autohr: Cynaith
+ * @author: Cynaith
  **/
 public interface MapCommand {
 }

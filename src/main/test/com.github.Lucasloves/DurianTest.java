@@ -1,7 +1,7 @@
 package com.github.Lucasloves;
 
 /**
- * @autohr: Cynaith
+ * @author: Cynaith
  **/
 public class DurianTest {
     public static void main(String[] args) {
