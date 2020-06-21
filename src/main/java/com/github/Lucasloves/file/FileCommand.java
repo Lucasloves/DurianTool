@@ -29,4 +29,12 @@ public interface FileCommand {
      * @return 返回字节数组对应的文件
      */
     File getFile(byte[] bfile,File file);
+
+    /**
+     *
+     * @param length 切分长度
+     * @param file 待分割文件
+     * @return 二维字节数组
+     */
+    byte[][] cutFile(int length, File file);
 }

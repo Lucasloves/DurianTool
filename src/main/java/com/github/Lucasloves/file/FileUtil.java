@@ -1,6 +1,7 @@
 package com.github.Lucasloves.file;
 
 import java.io.*;
+import java.util.Arrays;
 
 /**
  * @author: Cynaith
@@ -80,5 +81,22 @@ public class FileUtil implements FileCommand {
             }
         }
         return file;
+    }
+
+
+    @Override
+    public byte[][] cutFile(int length, File file) {
+        int part = (int)file.length()/length+1;
+        byte[][] cutByte = new byte[part][length];
+        byte[] filebytes = null;
+        try {
+            filebytes = getBytes(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        for (int i = 0; i < file.length(); i++) {
+            cutByte[i / length][i - (i / length) * length] = filebytes[i];
+        }
+        return cutByte;
     }
 }
