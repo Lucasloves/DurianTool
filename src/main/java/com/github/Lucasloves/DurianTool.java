@@ -4,6 +4,7 @@ import com.github.Lucasloves.collection.array.Arrays;
 import com.github.Lucasloves.collection.list.Lists;
 import com.github.Lucasloves.collection.map.Maps;
 import com.github.Lucasloves.collection.set.Sets;
+import com.github.Lucasloves.file.FileUtil;
 import com.github.Lucasloves.time.Times;
 
 /**
@@ -53,5 +54,13 @@ public class DurianTool {
      */
     public static Times Times(){
         return new Times();
+    }
+
+    /**
+     *
+     * @return 返回File工具类实例
+     */
+    public static FileUtil Files(){
+        return new FileUtil();
     }
 }
