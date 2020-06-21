@@ -1,6 +1,6 @@
 package com.github.Lucasloves.file;
 
-import java.io.File;
+import java.io.*;
 
 /**
  * @author: Cynaith
@@ -27,5 +27,58 @@ public class FileUtil implements FileCommand {
             size = size * 100 / 1024;
             return String.valueOf((size / 100)) + "." + String.valueOf((size % 100)) + "GB";
         }
+    }
+
+
+
+    @Override
+    public byte[] getBytes(File file) throws FileNotFoundException {
+        byte[] buffer = null;
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            ByteArrayOutputStream bos = new ByteArrayOutputStream(1000);
+            byte[] b = new byte[1000];
+            int n;
+            while ((n = fis.read(b)) != -1) {
+                bos.write(b, 0, n);
+            }
+            fis.close();
+            bos.close();
+            buffer = bos.toByteArray();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return buffer;
+    }
+
+    @Override
+    public File getFile(byte[] bfile,File file) {
+        BufferedOutputStream bos = null;
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(file);
+            bos = new BufferedOutputStream(fos);
+            bos.write(bfile);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (bos != null) {
+                try {
+                    bos.close();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }
+            if (fos != null) {
+                try {
+                    fos.close();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }
+        }
+        return file;
     }
 }
